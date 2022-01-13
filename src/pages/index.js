@@ -5,6 +5,7 @@ const IndexPage = () => {
     <main>
       <title>Home Page</title>
       <Button>Hello</Button>
+      <Button variant="outline">World</Button>
     </main>
   );
 };
