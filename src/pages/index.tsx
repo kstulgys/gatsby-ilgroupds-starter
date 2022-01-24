@@ -1,5 +1,6 @@
 import React from 'react';
 import { Stack, HStack, Box } from '@chakra-ui/react';
+import { ArrowRightCircleIcon, ArrowLeftCircleIcon, CheckIcon, PlusOutlineCircleIcon } from '@irishlife/ilgroupdesignsystem.icons';
 import { Calendar } from '@irishlife/ilgroupdesignsystem.organisms.calendar';
 import { Accordion } from '@irishlife/ilgroupdesignsystem.molecules.accordion';
 import { Alert } from '@irishlife/ilgroupdesignsystem.molecules.alert';
@@ -8,7 +9,6 @@ import { Dropdown } from '@irishlife/ilgroupdesignsystem.molecules.dropdown';
 import { Datepicker } from '@irishlife/ilgroupdesignsystem.molecules.datepicker';
 import { Button } from '@irishlife/ilgroupdesignsystem.atoms.button';
 import { Text } from '@irishlife/ilgroupdesignsystem.atoms.text';
-import { ArrowRightCircleIcon, ArrowLeftCircleIcon, CheckIcon, PlusOutlineCircleIcon } from '@irishlife/ilgroupdesignsystem.icons';
 import { Sidebar } from '@irishlife/ilgroupdesignsystem.organisms.sidebar';
 import { Navbar } from '@irishlife/ilgroupdesignsystem.organisms.navbar';
 import { Avatar } from '@irishlife/ilgroupdesignsystem.atoms.avatar';
@@ -54,13 +54,12 @@ export default function IndexPage() {
   );
 }
 
-
 function Content() {
   return (
     <Stack spacing={10}>
       <Text variant="caption-lg">Hello Team</Text>
       <Alert status="success">Hello World</Alert>
-      <Dropdown options={sidebarItems} onSelect={console.log} isMulti />
+      <Dropdown options={sidebarItems} onSelect={console.log} isDefaultOpen isMulti />
       <Datepicker onChange={console.log} />
       <Choice isBinary options={choicesItems} columns={[1, 3, 2]} />
       <HStack>
@@ -72,5 +71,3 @@ function Content() {
     </Stack>
   );
 }
-
-

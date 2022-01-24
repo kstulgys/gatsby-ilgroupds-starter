@@ -3,7 +3,7 @@
 # and commit this file to your remote git repository to share the goodness with others.
 
 tasks:
-  - init: yarn
+  - init: npm config set '@irishlife:registry' https://node.bit.dev && npx npm-check-updates -u && yarn
     command: yarn start
 vscode:
   extensions:
